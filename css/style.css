@@ -193,7 +193,7 @@ header{
  
   .img-content img{
     width: 100%;
-    height: 100%;
+    border-radius: 8px;
     object-fit: cover;
   }
  
@@ -222,8 +222,11 @@ header{
   .facts-item{
     border: 1px solid #FF900E;
     border-radius: 8px;
-    padding: 14px;
+    width: 140px;
+    height: 140px;
     transition: all .5s ease-in-out;
+    padding: 20px 20px;
+    
   }
 
   .facts-item:hover{
@@ -260,5 +263,205 @@ header{
     background-color: #FFF4E7;
     text-align: center;
     padding: 10px 0;
-    margin-bottom: 70px;
+
+  }
+
+  /*------------ Responsive Styles ---------------*/
+
+  /* Mobile Responsive */
+
+  @media screen and (max-width:576px) {
+    /* Header Section */
+      header{
+        padding: 0;
+      }
+      .container{
+        margin: 0;
+      }
+
+      .nav-container{
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-item{
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 10px;
+        align-items: center;
+      }
+
+      .barnd-new{
+        padding: 0 20px;
+        margin-top: 20px;
+      }
+
+      .brand-title{
+                    font-size: 22px;
+                    font-weight: 700;
+                    line-height: 35px;
+                    border-bottom: 2px solid #FF900E;
+                    
+      }
+      .brand-paragraph{
+        margin-bottom: 12px;
+        text-align: justify;
+        padding: 0 30px;
+      }
+      .banner{
+        width: 100vw;
+      }
+      .header-banner{
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+      }
+    .hide{
+      display: none;
+    }
+
+    /* Feature Section */
+    .feature-section{
+      margin-top: 30px;
+    }
+    .feature{
+      flex-direction: column-reverse;
+    }
+
+    .feature-left{
+      grid-template-columns: repeat(1,1fr);
+      justify-items: center;
+      grid-column-gap: 0;
+      grid-row-gap: 12px;
+    }
+    .feature-right-header{
+      text-align: center;
+    }
+    .feature-right-paragraph{
+      text-align: justify;
+    }
+    .feature-right-btn{
+      display: flex;
+      justify-content: center;
+    }
+    .feature-left-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Experiance Section */
+    .Experiance{
+      margin-top: 30px;
+      padding: 0 20px;
+    }
+    .exp-container{
+      flex-direction: column;
+    }
+    .exp-content-left , .exp-content-right{
+      width: 100%;
+    }
+    .exp-header-container{
+      border-left: 0;
+      padding: 0;
+      text-align: center;
+      margin-bottom: 12px;
+      margin-top: 20px;
+    }
+    .img-content{
+      margin-top: 30px;
+    }
+    .img-content img{
+      width: 100%;
+      height: 280px;
+    }
+    .years-content{
+      bottom: 0;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    /* Fact Section */
+    
+    .heading-content{
+      width: 100%;
+    }
+    .facts-heading{
+      margin-bottom: 0;
+    }
+    .facts-paragraph{
+      padding: 20px;
+    }
+    .facts-content{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    /* Sponsor Section */
+    .sponsor-heading{
+      margin-bottom: 20px;
+    }
+    .sponsor-content{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+    }
+    /* Footer Section */
+
+    .footer-content{
+      margin-bottom: 0;
+    }
+  }
+
+  /* I Pad Responsive */
+
+  @media screen and (min-width:577px) and (max-width:992px) {
+    .container{
+      margin: 0;
+      
+    }
+    .nav-container{
+      padding: 0 20px;
+    }
+    .barnd-new{
+      padding: 0 80px;
+    }
+    .banner{
+      width: 100vw;
+    }
+    
+    .header-banner{
+      width: 100%;
+      height: auto;
+      margin-bottom: 0;
+    }
+    .exp-container{
+      padding: 0 20px;
+    }
+
+    .exp-content-left, .exp-content-right{
+      width: 50%;
+    }
+    .exp-content-right{
+      align-self: center;
+    }
+    
+    .years-content{
+      bottom: 0;
+      margin: 30px auto 0 auto;
+    }
+    .facts-content{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      align-items: center;
+      grid-row-gap: 40px;
+    }
+    .sponsor-content{
+      padding: 0 90px;
+    }
+    .hide{
+      display: none;
+    }
   }
